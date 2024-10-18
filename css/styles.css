@@ -140,7 +140,7 @@ nav {
 main {
     padding: 2rem;
     text-align: left;
-    
+    font-size: 120%;
 }
 
 footer {
@@ -156,4 +156,33 @@ footer {
     padding: 20px;
     padding-bottom: 4px;
     height: 100px;
+}
+
+.info{
+    margin-top: 5rem;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.info p{
+    flex: 1;
+    margin-right: 20px;
+}
+
+.info #caracteristicas{
+    list-style-type : "- ";
+    margin-left: 1.5rem;
+    flex: 1;
+}
+
+.info #estudio{
+    max-width: 300px;
+    height: auto;
+    margin-right: 30px;
+}
+
+.artistas{
+    margin-top: 2rem;
+    text-align: right;
 }
