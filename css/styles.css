@@ -2,7 +2,7 @@
 @import url("https://db.onlinewebfonts.com/c/28d12f3a535c472cd0a39179aa1cd3ea?family=FoughtKnight+Regular");
 
 
-/* Estilos generales */
+/* general */
 * {
     margin: 0;
     padding: 0;
@@ -76,7 +76,7 @@ nav {
     padding: 4px;
 }
 
-/* Menú móvil oculto por defecto */
+/* Menú móvil */
 .mobile-menu {
     display: none;
     flex-direction: column;
@@ -117,7 +117,7 @@ nav {
     margin: 3px 0;
 }
 
-/* Media queries para dispositivos móviles */
+/* Media queries */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -134,9 +134,24 @@ nav {
     .mobile-menu.open {
         display: flex;
     }
+
+    .info {
+        flex-direction: column; /* Cambiamos a una columna en pantallas pequeñas */
+        align-items: center; /* Alineamos los elementos al centro */
+    }
+
+    .text-container {
+        margin-right: 0; /* Eliminamos el margen a la derecha */
+        margin-bottom: 20px; /* Agregamos un margen inferior para separar del contenido */
+    }
+
+    .info img {
+        max-width: 100%; /* La imagen ocupa todo el ancho disponible */
+        height: auto; /* Mantiene la proporción */
+    }
 }
 
-/* Estilos del contenido principal */
+/* Estilos principales */
 main {
     padding: 2rem;
     text-align: left;
@@ -144,18 +159,10 @@ main {
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
     background-color: #333;
-    color: #fff;
-    position: fixed;
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    text-align: center; 
-    padding: 20px;
-    padding-bottom: 4px;
-    height: 100px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 .info{
@@ -177,12 +184,69 @@ footer {
 }
 
 .info #estudio{
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
-    margin-right: 30px;
+    margin-right: 15px;
 }
 
 .artistas{
     margin-top: 2rem;
     text-align: right;
+}
+
+
+/*carrusel*/
+.carrusel {
+    position: relative;
+    max-width: 600px; /* Ajusta el tamaño del carrusel */
+    margin: auto;
+    margin-top: 4rem;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    width: 80px;
+}
+
+img {
+    width: 100%; /* Las imágenes ocuparán todo el ancho del carrusel */
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/*contacto*/
+.disponible{
+    font-size: 1.25rem;
+    margin-left: 2rem;
+}
+
+iframe {
+    margin-left: 2rem;
+    margin-top: 3.5rem;
 }
